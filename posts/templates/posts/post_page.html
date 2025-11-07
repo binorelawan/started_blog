@@ -15,4 +15,12 @@
         <p>{{ post.date }}</p>
         <p>{{ post.body }}</p>
     </section>
+    <!-- Edit button -->
+    <a href="{% url 'posts:edit-post' pk=post.pk %}">
+        <span role="img" aria-label="Edit" title="Edit">✏️</span>
+    </a> 
+    <!-- Deleted button -->
+    <a href="{% url 'posts:delete-post' slug=post.slug %}">
+        <span role="img" aria-label="Delete" title="Delete">🚮</span>
+    </a> 
 {% endblock %}
